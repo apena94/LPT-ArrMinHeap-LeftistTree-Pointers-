@@ -1,0 +1,14 @@
+
+
+all:LPT
+
+LPT:   LPT.o
+	g++ -o LPT LPT.o
+
+
+LPT.o: LPT.cpp LPT.h
+	g++ -c -Wall -g LPT.cpp
+
+clean:
+	rm -rf *.o
+	rm -rf LPT
